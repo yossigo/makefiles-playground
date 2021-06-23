@@ -1,0 +1,2 @@
+mymodule.o: mymodule.c mymodule.h
+myprog.o: myprog.c mymodule.h
