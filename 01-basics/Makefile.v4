@@ -1,0 +1,17 @@
+
+# VAR = vs. VAR :=
+MYPROG = myprog
+MYPROG_SOURCES = $(wildcard *.c)
+MYPROG_OBJECTS = $(patsubst %.c,%.o,$(MYPROG_SOURCES))
+
+# How to override these?
+CFLAGS = -O3
+PREFIX = /usr/local
+
+all: $(MYPROG)
+
+$(MYPROG): $(MYPROG_OBJECTS)
+	$(CC) -o $@ $^
+
+clean:
+	-rm -f $(MYPROG) $(MYPROG_OBJECTS)

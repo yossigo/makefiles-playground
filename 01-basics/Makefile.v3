@@ -1,0 +1,20 @@
+
+MYPROG = myprog
+MYPROG_SOURCES = myprog.c
+MYPROG_OBJECTS = $(patsubst %.c,%.o,$(MYPROG_SOURCES))
+
+# How to override these?
+CFLAGS = -O3
+PREFIX = /usr/local
+
+all: $(MYPROG)
+
+$(MYPROG): $(MYPROG_OBJECTS)
+	$(CC) -o $@ $^
+
+install: $(MYPROG)
+	mkdir -p $(PREFIX)/bin
+	cp $(MYPROG) $(PREFIX)/bin
+
+clean:
+	-rm -f $(MYPROG) $(MYPROG_OBJECTS)

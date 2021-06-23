@@ -1,0 +1,17 @@
+
+
+all: myprog
+
+myprog: myprog.o
+	$(CC) -o $@ $^
+
+# Automatic rule - old style
+#.c.o:
+#	$(CC) -c $<
+
+# Automatic rule - new style
+#%.o: %.c
+#	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm myprog myprog.o
