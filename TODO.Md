@@ -1,0 +1,4 @@
+
+* Bootstrapping
+    * autoscan
+    * autoheader

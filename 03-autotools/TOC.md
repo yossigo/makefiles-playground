@@ -40,8 +40,3 @@ Quick wins already
 * Build dirs support
 * Install with prefix and DESTDIR
 
-Not Covered
-===========
-
-* Bootstrapping - `autoscan` and `autoheader`
-
