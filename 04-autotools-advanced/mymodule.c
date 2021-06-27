@@ -38,3 +38,8 @@ void module_func(void)
     char *x = read_input("Your input>> ");
     printf("Received: %s\n", x);
 }
+
+int add_func(int a, int b)
+{
+    return a + b;
+}
